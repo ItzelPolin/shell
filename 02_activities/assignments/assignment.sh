@@ -56,8 +56,8 @@ cp   raw/*server*.log   processed/server_logs/
 
 
 # 6. Repeat the above step for user logs and event logs
-cp  data/raw/*user*.log   data/processed/server_logs/
-cp  data/raw/*event*.log   data/processed/server_logs/
+cp  raw/*user*.log   processed/server_logs/
+cp  raw/*event*.log   processed/server_logs/
 ##cp ./raw/user*  ./processed/user_logs
 ##cp ./raw/event*  ./processed/event_logs
 
