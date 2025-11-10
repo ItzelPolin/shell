@@ -18,6 +18,7 @@ cd newproject
 
 mkdir analysis output
 touch README.md
+echo "# Project Name: DSI Consulting Inc." > README.md
 touch analysis/main.py
 
 # download client data
@@ -35,7 +36,7 @@ mv ./rawdata ./data/raw
 
 # 3. List the contents of the ./data/raw directory
 ##cd raw
-ls raw
+ls data/raw/
 
 
 # 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
@@ -49,19 +50,23 @@ mkdir  server_logs user_logs event_logs
 
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
 cd ..
-cp ./raw/server*   ./processed/server_logs
-cp ./raw/*.log   ./processed/server_logs
+##cp ./raw/server*   ./processed/server_logs
+##cp ./raw/*.log   ./processed/server_logs
+cp   ./raw/*server*.log   ./processed/server_logs/
 
 
 # 6. Repeat the above step for user logs and event logs
-cp ./raw/user*   ./processed/user_logs
-cp ./raw/event*   ./processed/event_logs
+cp  ./raw/*user*.log   ./processed/user_logs/
+cp  ./raw/*event*.log  ./processed/event_logs/
+##cp ./raw/user*  ./processed/user_logs
+##cp ./raw/event*  ./processed/event_logs
 
 
 
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
-rm ./raw/user_*ipaddr*
-rm ./processed/user_logs/user_*ipaddr*   
+##rm .raw/user_ipaddr*
+rm ./processed/user_logs/*ipaddr* ./raw/*ipaddr*
+ 
 
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
