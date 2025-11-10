@@ -51,12 +51,12 @@ mkdir  server_logs user_logs event_logs
 cd ..
 ##cp ./raw/server*   ./processed/server_logs
 ##cp ./raw/*.log   ./processed/server_logs
-cp   raw/*server*.log   processed/server_logs/
+cp   data/raw/*server*.log   processed/server_logs/
 
 
 # 6. Repeat the above step for user logs and event logs
-cp  raw/*user*.log   processed/server_logs/
-cp   raw/*event*.log   processed/server_logs/
+cp  data/raw/*user*.log   data/processed/server_logs/
+cp  data/raw/*event*.log   data/processed/server_logs/
 ##cp ./raw/user*  ./processed/user_logs
 ##cp ./raw/event*  ./processed/event_logs
 
@@ -64,8 +64,8 @@ cp   raw/*event*.log   processed/server_logs/
 
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
 ##rm .raw/user_ipaddr*
-rm ./processed/user_logs/*ipaddr*
-rm .raw/*ipaddr*
+rm .data/processed/user_logs/*ipaddr*
+rm .data/raw/*ipaddr*
 
 
 
