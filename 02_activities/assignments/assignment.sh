@@ -52,12 +52,12 @@ mkdir  server_logs user_logs event_logs
 cd ..
 ##cp ./raw/server*   ./processed/server_logs
 ##cp ./raw/*.log   ./processed/server_logs
-cp   raw/*server*.log   processed/server_logs/
+cp   .data/raw/*server*.log   .data/processed/server_logs/
 
 
 # 6. Repeat the above step for user logs and event logs
-cp  raw/*user*.log   processed/user_logs/
-cp  raw/*event*.log  processed/event_logs/
+cp  .data/raw/*user*.log   .data/processed/user_logs/
+cp  .data/raw/*event*.log  .data/processed/event_logs/
 ##cp ./raw/user*  ./processed/user_logs
 ##cp ./raw/event*  ./processed/event_logs
 
