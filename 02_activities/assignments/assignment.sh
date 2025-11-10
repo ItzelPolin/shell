@@ -71,3 +71,4 @@ ls -R ./processed > ./inventory.txt
 ###########################################
 
 echo "Project setup is complete!"
+
